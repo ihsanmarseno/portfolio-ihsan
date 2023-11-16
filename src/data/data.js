@@ -1,4 +1,3 @@
-import RealEst from '../assets/projects/realestate.jpg'
 import ScheduleWc from '../assets/projects/schedule-wc.png'
 import Linkio from '../assets/projects/link-io.png'
 import Movlies from '../assets/projects/movlies.png'
@@ -30,14 +29,7 @@ export const data=[
         id:4,
         name:"Al Nasr Website",
         image:Alnasr,
-        github:"",
-        live:"https://al-nasr-web.vercel.app/",
-    },
-    {
-        id:5,
-        name:"Al Nasr Website",
-        image:Alnasr,
-        github:"",
+        github:"https://github.com/ihsanmarseno/al-nasr",
         live:"https://al-nasr-web.vercel.app/",
     },
 
