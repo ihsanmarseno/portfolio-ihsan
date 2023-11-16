@@ -17,12 +17,12 @@ const Home = () => {
         <p className="text-[#8892b0] py-4 max-w-[700px]">
           I am a Computer Science student at UPN Veteran Jakarta, with a current
           focus on front-end web development. Below is a showcase of my recent
-          work
+          projects
         </p>
         <div>
-          <Link to="work" smooth={true} duration={1000}>
+          <Link to="projects" smooth={true} duration={1000}>
             <button className="flex items-center px-6 py-3 my-2 text-white border-2 group hover:bg-[#FF5757] hover:border-[#FF5757]">
-              View Work
+              View Projects
               <span className="duration-300 group-hover:rotate-90">
                 <HiArrowNarrowRight className="ml-3 " />
               </span>

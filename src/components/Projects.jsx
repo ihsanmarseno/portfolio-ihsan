@@ -1,20 +1,20 @@
 import { data } from "../data/data.js";
 
 
-const Work = () => {
+const Projects = () => {
 
     // projects file
     const project = data;
     //setProject(data);
   
   return (
-    <div name='work' className='w-full md:h-screen text-gray-300 bg-[#0a192f] pt-20 lg:pt-0'>
+    <div name='projects' className='w-full md:h-screen text-gray-300 bg-[#0a192f] pt-20 lg:pt-0'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
         <div className='pb-8'>
-          <p className='inline text-4xl font-bold text-gray-300 border-b-4 border-pink-600'>
-            Work
+          <p className='inline text-4xl font-bold text-gray-300 border-b-4 border-[#FF5757]'>
+            Projects
           </p>
-          <p className='py-6'>{`// Check out some of my recent work`}</p>
+          <p className='py-6'>{`// Check out some of my recent projects`}</p>
         </div>
 
 {/* container for projects */}
@@ -62,4 +62,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;
