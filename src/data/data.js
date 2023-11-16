@@ -2,6 +2,7 @@ import ScheduleWc from '../assets/projects/schedule-wc.png'
 import Linkio from '../assets/projects/link-io.png'
 import Movlies from '../assets/projects/movlies.png'
 import Alnasr from '../assets/projects/alnasr.png'
+import Finance from '../assets/projects/finance-data.png'
 
 export const data=[
     {
@@ -27,10 +28,17 @@ export const data=[
     },
     {
         id:4,
-        name:"Al Nasr Website",
+        name:"Al Nasr Responsive Website",
         image:Alnasr,
         github:"https://github.com/ihsanmarseno/al-nasr",
         live:"https://al-nasr-web.vercel.app/",
+    },
+    {
+        id:5,
+        name:"Finance Data Responsive Website",
+        image:Finance,
+        github:"",
+        live:"https://finance-data-responsive.vercel.app/",
     },
 
 
