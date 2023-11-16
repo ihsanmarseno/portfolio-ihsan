@@ -14,7 +14,7 @@ export const data=[
     },
     {
         id:2,
-        name:"URL Shortener Link,io",
+        name:"URL Shortener Link.io",
         image:Linkio,
         github:"https://github.com/ihsanmarseno/final-project-ksm",
         live:"https://final-project-ksm.vercel.app/",
@@ -28,7 +28,7 @@ export const data=[
     },
     {
         id:4,
-        name:"Al Nasr Responsive Website",
+        name:"Al Nasr Desktop Website",
         image:Alnasr,
         github:"https://github.com/ihsanmarseno/al-nasr",
         live:"https://al-nasr-web.vercel.app/",

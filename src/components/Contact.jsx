@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
     <div name='contact' className='w-full h-screen bg-[#0a192f] flex justify-center items-center p-4'>
-        <form method='POST' action="https://getform.io/f/8ce1bed1-b946-4e45-a04c-fe5a21b6f254" className='flex flex-col max-w-[600px] w-full'>
+        <form method='POST' action="https://formspree.io/f/xpzgelow" className='flex flex-col max-w-[600px] w-full'>
             <div className='pb-8'>
                 <p className='inline text-4xl font-bold text-gray-300 border-b-4 border-[#FF5757]'>Contact</p>
                 <p className='py-4 text-gray-300'>{`// Submit the form below or email - ihsanmarseno09@gmail.com`}</p>
