@@ -1,12 +1,12 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { useEffect } from "react";
-import 'aos/dist/aos.css'; // Import AOS styles
+import 'aos/dist/aos.css'; 
 import AOS from 'aos';
 
 const Home = () => {
   useEffect(() => {
-    AOS.init(); // Initialize AOS library
+    AOS.init();
   }, []);
 
   return (
