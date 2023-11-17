@@ -6,7 +6,7 @@ import ReactImg from '../assets/react.png';
 import Node from '../assets/node.png';
 import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
-import Next from '../assets/next.svg';
+import Next from '../assets/next.png';
 import Figma from '../assets/figma.png';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
