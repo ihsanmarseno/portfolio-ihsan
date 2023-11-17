@@ -63,7 +63,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="about" smooth={true} duration={500} offset={-25}>
+          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
             About
           </Link>
         </li>
@@ -82,6 +82,22 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
+
+        {/* Social icons for mobile */}
+        <div className="flex mt-4">
+          <a href="https://www.linkedin.com/in/ihsanmarseno/" className="mx-4 text-gray-300" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={30} />
+          </a>
+          <a href="https://github.com/ihsanmarseno" className="mx-4 text-gray-300" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={30} />
+          </a>
+          <a href="mailto:ihsanmarseno09@gmail.com" className="mx-4 text-gray-300">
+            <HiOutlineMail size={30} />
+          </a>
+          <a href="/" className="mx-4 text-gray-300">
+            <BsFillPersonLinesFill size={30} />
+          </a>
+        </div>
       </ul>
 
       {/* Social icons */}
@@ -106,10 +122,10 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
             <a
               className="flex items-center justify-between w-full text-gray-300"
-              href="/"
+              href="mailto:ihsanmarseno09@gmail.com"
             >
               Email <HiOutlineMail size={30} />
-            </a>
+            </a>  
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a
