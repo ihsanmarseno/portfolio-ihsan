@@ -1,6 +1,14 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Photo from "../assets/photo-profile.png";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+    });
+  }, []);
+
   return (
     <div name="about" className="w-full h-screen bg-[#0a192f] text-gray-300">
       <div className="flex flex-col items-center justify-center w-full h-full">
@@ -12,9 +20,9 @@ const About = () => {
           </div>
           <div></div>
         </div>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 mt-4">
+        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 mt-4" data-aos="fade-up">
           <div className="text-4xl font-bold sm:text-right place-self-center">
-            <img src={Photo} alt="Ihsan Tri Marseno" className="rounded-full"/>
+            <img src={Photo} alt="Ihsan Tri Marseno" className="rounded-full" />
           </div>
           <div className="flex items-center tracking-widest lg:text-lg">
             <p>
