@@ -13,7 +13,7 @@ const Home = () => {
     <div
       className="w-full h-screen bg-[#0a192f]" name="home"
     >
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
+      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full">
         <p
           className="text-2xl text-[#FF5757] font-semibold"
           data-aos="fade-up"
