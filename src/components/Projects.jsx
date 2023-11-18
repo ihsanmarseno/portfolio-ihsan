@@ -31,9 +31,9 @@ const Projects = () => {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {displayedProjects.map((item, index) => (
+          {displayedProjects.map((item) => (
             <div
-              key={index}
+              key={item.id}
               className="shadow-lg shadow-[#040c16] container rounded-md content-div"
               data-aos="fade-up"
             >
@@ -59,7 +59,7 @@ const Projects = () => {
               </div>
               <div className="flex flex-col justify-between px-4 pt-4">
                 <div>
-                  <p className="text-xl font-semibold">{item.name}</p>
+                  <p className="inline text-xl font-semibold border-b-4 border-[#ea9a9a]">{item.name}</p>
                   <p className="text-sm text-[#a5a2a2] py-2">{item?.description}</p>
                 </div>
                 <div className="absolute bottom-0 pb-4">
