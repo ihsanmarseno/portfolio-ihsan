@@ -31,7 +31,7 @@ const Home = () => {
         </h1>
         <h2
           className="text-2xl md:text-4xl font-bold text-[#8892b0]"
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-delay="600"
         >
           {`Front-end and UI/UX Enthusiast.`}
@@ -49,7 +49,7 @@ const Home = () => {
           <Link to="projects" smooth={true} duration={1000}>
             <button
               className="flex items-center px-6 py-3 my-2 text-white border-2 group hover:bg-[#FF5757] hover:border-[#FF5757]"
-              data-aos="fade-up"
+              data-aos="fade-right"
               data-aos-delay="1000"
             >
               View Projects

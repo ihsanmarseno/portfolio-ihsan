@@ -20,11 +20,11 @@ const About = () => {
           </div>
           <div></div>
         </div>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 mt-4" data-aos="fade-up">
-          <div className="text-4xl font-bold sm:text-right place-self-center">
+        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 mt-4">
+          <div className="text-4xl font-bold sm:text-right place-self-center" data-aos="fade-up" data-aos-delay="200">
             <img src={Photo} alt="Ihsan Tri Marseno" className="w-48 rounded-full md:w-full" />
           </div>
-          <div className="flex items-center text-base lg:tracking-widest lg:text-lg">
+          <div className="flex items-center text-base lg:tracking-widest lg:text-lg" data-aos="fade-right" data-aos-delay="400">
             <p>
               {`I'm Ihsan Tri Marseno, a 20-year-old with a passion for carving my
               career path in front-end development and UI/UX. While my primary
