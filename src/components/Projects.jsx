@@ -12,7 +12,7 @@ const Projects = () => {
   const [showMore, setShowMore] = useState(false);
 
   useEffect(() => {
-    AOS.init({});
+    AOS.init();
   }, []);
 
   const project = data;
@@ -37,7 +37,7 @@ const Projects = () => {
             <div
               key={item.id}
               className="shadow-lg shadow-[#040c16] container rounded-md content-div"
-              data-aos="fade-up"
+              data-aos="flip-left"
             >
               <div className="flex justify-between px-4 pt-4">
                 <button className="bg-[#0a192f] text-white px-2 py-1 border border-white hover:bg-[#FF5757] hover:border-[#FF5757] text-sm">
@@ -80,7 +80,7 @@ const Projects = () => {
             className="bg-[#0a192f] text-white px-4 py-2 border border-white hover:bg-[#FF5757] hover:border-[#FF5757]"
             onClick={() => setShowMore(!showMore)}
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="100"
           >
             {showMore ? <FaArrowUp /> : <FaArrowDown />}
           </button>

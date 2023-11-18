@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
+import { HiMiniBars3 } from "react-icons/hi2";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import Logo from "../assets/marseno.png";
@@ -46,8 +48,9 @@ const Navbar = () => {
 
       {/* Hamburger */}
       <div onClick={handleClick} className="z-10 md:hidden">
-        {!nav ? <FaBars /> : <FaTimes />}
+        {!nav ? <HiMiniBars3 size={28}/> : null}
       </div>
+
 
       {/* Mobile menu */}
       <ul
@@ -57,27 +60,35 @@ const Navbar = () => {
             : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center z-40"
         }
       >
-        <li className="py-6 text-3xl">
+        {/* Close button for mobile */}
+      {nav && (
+        <div
+          onClick={handleClick}
+        >
+          <IoMdClose size={28} />
+        </div>
+      )}
+        <li className="py-4 text-2xl">
           <Link onClick={handleClick} to="home" smooth={true} duration={500}>
             Home
           </Link>
         </li>
-        <li className="py-6 text-3xl">
+        <li className="py-4 text-2xl">
           <Link onClick={handleClick} to="about" smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li className="py-6 text-3xl">
+        <li className="py-4 text-2xl">
           <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
             Skills
           </Link>
         </li>
-        <li className="py-6 text-3xl">
+        <li className="py-4 text-2xl">
           <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
             Projects
           </Link>
         </li>
-        <li className="py-6 text-3xl">
+        <li className="py-4 text-2xl">
           <Link onClick={handleClick} to="contact" smooth={true} duration={500} offset={-20}>
             Contact
           </Link>
