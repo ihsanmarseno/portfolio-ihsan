@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import Logo from "../assets/marseno.png";
+import Logo from "../assets/marseno1.png";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-50">
       <Link to="home" smooth={true} duration={500}>
-        <img src={Logo} alt="Logo Image" style={{ width: "120px" }} className="cursor-pointer" />
+        <img src={Logo} alt="Logo Image" className="cursor-pointer lg:w-[150px] md:w-[125px] w-[100px]" />
       </Link>
 
       {/* menu */}
