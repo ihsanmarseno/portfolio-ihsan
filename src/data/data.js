@@ -6,7 +6,7 @@ export const data=[
         description:"Movlie Movies is a website designed to showcase lists of popular movies, upcoming releases, and currently playing films. Additionally, it offers search functionality and detailed information for each movie. Leveraging Next.js 13 and Tailwind CSS technologies, Movlie Movies provides a responsive and contemporary user experience for exploring the world of cinema.",
         github:"https://github.com/ihsanmarseno/movie-api",
         live:"https://movlie-movies.vercel.app/",
-        technologies: "Next Js 13, Tailwind CSS, daisy UI",
+        technologies: "Next Js, Tailwind CSS, daisy UI",
     },
     {
         id:2,
@@ -15,7 +15,7 @@ export const data=[
         description:"Link.io is a website designed for URL shortening, utilizing an Open Source API for the purpose. This platform is particularly adept at handling numerous endpoints for URLs. The technology stack includes Next.js 13, TypeScript, and Tailwind CSS.",
         github:"https://github.com/ihsanmarseno/final-project-ksm",
         live:"https://final-project-ksm.vercel.app/",
-        technologies: "Next Js 13, Tailwind CSS, Typescript",
+        technologies: "Next Js, Tailwind CSS, Typescript",
     },
     {
         id:3,
@@ -24,7 +24,7 @@ export const data=[
         description:"The 2022 World Cup Schedule is a website designed to showcase the football match schedule for the year-end 2022 World Cup. It includes details such as play dates, country names, and final scores. This project leverages the worldcupjson.net and FIFA API. The technology stack comprises Next.js 13, Tailwind CSS, and TypeScript.",
         github:"https://github.com/ihsanmarseno/jadwal-pildun",
         live:"https://schedule-wc.vercel.app/",
-        technologies: "Next Js 13, Tailwind CSS, Typescript",
+        technologies: "Next Js, Tailwind CSS, Typescript, Framer-Motion",
     },
     {
         id:4,
@@ -51,7 +51,7 @@ export const data=[
         description:"Marseno is my personal website, named after my distinctive surname. It features a portfolio of projects I've worked on, information about me, my skill set, and a contact section for potential collaborations. The website is built using React + Vite for efficient development and Tailwind CSS for sleek and responsive design.",
         github:"https://github.com/ihsanmarseno/portfolio-ihsan",
         live:"https://marseno.vercel.app/",
-        technologies: "React + Vite, Tailwind CSS",
+        technologies: "React + Vite, Tailwind CSS, AOS",
     },
     {
         id:7,

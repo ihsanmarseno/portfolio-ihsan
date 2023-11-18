@@ -5,6 +5,8 @@ import { data } from "../data/data.js";
 import { FaGithub } from "react-icons/fa";
 import { TbWorldShare } from "react-icons/tb";
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
+import { GrTechnology } from "react-icons/gr";
+import { MdConstruction } from "react-icons/md";
 
 const Projects = () => {
   const [showMore, setShowMore] = useState(false);
@@ -53,17 +55,19 @@ const Projects = () => {
                     </a>
                   )}
                   {!item.github && !item.live && (
-                    <p className="text-xs">Under Construction</p>
+                    <MdConstruction className="w-6 h-6" />
                   )}
                 </div>
               </div>
               <div className="flex flex-col justify-between px-4 pt-4">
                 <div>
-                  <p className="inline text-xl font-semibold border-b-4 border-[#ea9a9a]">{item.name}</p>
+                  <p className="inline text-lg font-semibold border-b-2 border-[#ea9a9a]">{item.name}</p>
                   <p className="text-sm text-[#a5a2a2] py-2">{item?.description}</p>
                 </div>
                 <div className="absolute bottom-0 pb-4">
-                  <p className="text-sm">{`Tech: ${item.technologies}`}</p>
+                  <div className="flex items-center gap-1 text-xs tracking-tight text-white">
+                    <span><GrTechnology /></span>
+                    {item.technologies}</div>
                 </div>
               </div>
             </div>
