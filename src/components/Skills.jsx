@@ -8,6 +8,7 @@ import Node from '../assets/node.png';
 import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
 import Next from '../assets/next.png';
+import Bootstrap from '../assets/bootstrap.svg';
 import Figma from '../assets/figma.png';
 import Canva from '../assets/canva.png';
 import 'aos/dist/aos.css';
@@ -31,8 +32,9 @@ const Skills = () => {
     { id: 7, image: Node, alt: 'Node icon', label: 'Node Js' },
     { id: 8, image: Next, alt: 'Next icon', label: 'Next Js' },
     { id: 9, image: Tailwind, alt: 'Tailwind icon', label: 'Tailwind CSS' },
-    { id: 10, image: Figma, alt: 'Figma icon', label: 'Figma' },
-    { id: 11, image: Canva, alt: 'Canva icon', label: 'Canva' },
+    { id: 10, image: Bootstrap, alt: 'Bootstrap icon', label: 'Bootstrap' },
+    { id: 11, image: Figma, alt: 'Figma icon', label: 'Figma' },
+    { id: 12, image: Canva, alt: 'Canva icon', label: 'Canva' },
   ];
 
   const displayedSkills = showMore ? skillsData : skillsData.slice(0, 4);
