@@ -105,7 +105,7 @@ const Navbar = () => {
           <a href="mailto:ihsanmarseno09@gmail.com" className="mx-4 text-gray-300">
             <HiOutlineMail size={30} />
           </a>
-          <a href="/" className="mx-4 text-gray-300">
+          <a href="https://drive.google.com/file/d/1bHPUBurxNOqJscRFYz8L_WMMXlnMw6_q/view?usp=sharing" className="mx-4 text-gray-300">
             <BsFillPersonLinesFill size={30} />
           </a>
         </div>
@@ -141,9 +141,9 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a
               className="flex items-center justify-between w-full text-gray-300"
-              href="/"
+              href="https://drive.google.com/file/d/1bHPUBurxNOqJscRFYz8L_WMMXlnMw6_q/view?usp=sharing"
             >
-              Resume <BsFillPersonLinesFill size={30} />
+              CV <BsFillPersonLinesFill size={30} />
             </a>
           </li>
         </ul>

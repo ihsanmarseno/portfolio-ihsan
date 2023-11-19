@@ -41,7 +41,7 @@ const Home = () => {
           data-aos="fade-up"
           data-aos-delay="800"
         >
-          {`I'm a Computer Science student at UPN Veteran Jakarta, with a current
+          {`I'm a Informatics student at UPN Veteran Jakarta, with a current
           focus on front-end web development. Below is a showcase of my recent
           projects`}
         </p>
