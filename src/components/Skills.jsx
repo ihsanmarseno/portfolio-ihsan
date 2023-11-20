@@ -9,7 +9,7 @@ import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
 import Next from '../assets/next.png';
 import Bootstrap from '../assets/bootstrap.svg';
-import Figma from '../assets/figma.png';
+import Figma from '../assets/figma.png'; 
 import Canva from '../assets/canva.png';
 import 'aos/dist/aos.css';
 import AOS from 'aos';

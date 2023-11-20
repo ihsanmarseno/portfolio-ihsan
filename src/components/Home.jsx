@@ -22,7 +22,7 @@ const Home = () => {
           Hello,
         </p>
         <p
-          className="text-3xl md:text-5xl lg:text-7xl font-bold text-[#ccd6f6]"
+          className="text-3xl md:text-5xl lg:text-7xl font-bold text-[#f5f7ff]"
           data-aos="fade-up"
           data-aos-delay="400"
         >
@@ -30,14 +30,14 @@ const Home = () => {
           <span className="text-[#FF5757] text-lg md:text-2xl"> {`'s here`}</span>
         </p>
         <p
-          className="text-xl md:text-4xl font-bold text-[#8892b0]"
+          className="text-xl md:text-4xl font-bold text-[#2ea4ff]"
           data-aos="fade-right"
           data-aos-delay="600"
         >
           {`Front-end and UI/UX Enthusiast.`}
         </p>
         <p
-          className="text-[#8892b0] py-4 max-w-[700px]"
+          className="text-[#e4e4ee] py-4 max-w-[700px]"
           data-aos="fade-up"
           data-aos-delay="800"
         >
