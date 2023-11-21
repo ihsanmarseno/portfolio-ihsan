@@ -6,7 +6,7 @@ import App1 from "./App1";
 function App() {
   return (
     <>
-      <Routes>
+      <Routes basename="https://marseno.vercel.app">
         <Route path="/" element={<App1 />} />
         <Route path="/projects" element={<FullProjects />} />
       </Routes>
