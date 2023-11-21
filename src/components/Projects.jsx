@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { TbWorldShare } from "react-icons/tb";
 import { GrTechnology } from "react-icons/gr";
 import { MdConstruction } from "react-icons/md";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 const Projects = () => {
   useEffect(() => {
@@ -77,12 +78,15 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center pt-4">
+        <div className="flex justify-center pt-8">
           <a
             href="/projects"
-            className="bg-[#0a192f] text-white px-4 py-2 border border-white hover:bg-[#FF5757] hover:border-[#FF5757]"
+            className="bg-[#0a192f] flex items-center text-white px-4 py-2 border group border-white hover:bg-[#FF5757] hover:border-[#FF5757]"
           >
             View Full Projects
+            <span className="duration-300 group-hover:-rotate-45">
+                <HiArrowNarrowRight className="ml-3" />
+              </span>
           </a>
         </div>
       </div>

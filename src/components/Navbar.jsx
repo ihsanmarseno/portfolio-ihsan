@@ -35,7 +35,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="text-lg">
-          <Link to="projects" smooth={true} duration={500} offset={-90}>
+          <Link to="projects" smooth={true} duration={500}>
             Projects
           </Link>
         </li>

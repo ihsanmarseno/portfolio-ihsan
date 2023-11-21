@@ -18,14 +18,13 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="w-full h-full text-gray-300 bg-[#0a192f] pt-20 lg:pt-0"
+      className="w-full h-full text-gray-300 bg-[#0a192f]"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center h-full">
         <div className="pb-8">
         <div className="flex py-4">
-                <a href="/" className="flex items-center text-white px-4 py-2 border border-white hover:bg-[#FF5757] hover:border-[#FF5757]">
-                    <HiArrowNarrowLeft />
-                    <span className="pl-4">Back to Home</span>
+                <a href="/" className="flex items-center text-white hover:text-[#FF5757]">
+                    <HiArrowNarrowLeft className="w-8 h-8" />
                 </a>
             </div>
           <p className="inline text-4xl font-bold text-gray-300 border-b-4 border-[#FF5757]">
