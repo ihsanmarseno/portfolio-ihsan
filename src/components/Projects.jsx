@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <div
       name="projects"
-      className="w-full md:h-full text-gray-300 bg-[#0a192f] pt-20 lg:pt-0"
+      className="w-full h-full text-gray-300 bg-[#0a192f] pt-[100px]"
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col w-full h-full">
         <div className="pb-8">
