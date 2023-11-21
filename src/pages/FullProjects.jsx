@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { TbWorldShare } from "react-icons/tb";
 import { GrTechnology } from "react-icons/gr";
 import { MdConstruction } from "react-icons/md";
+import { HiArrowNarrowLeft } from "react-icons/hi";
 
 const Projects = () => {
   useEffect(() => {
@@ -14,15 +15,19 @@ const Projects = () => {
 
   const project = data;
 
-  const displayedProjects = project.slice(0, 6);
-
   return (
     <div
       name="projects"
-      className="w-full md:h-full text-gray-300 bg-[#0a192f] pt-20 lg:pt-0"
+      className="w-full h-full text-gray-300 bg-[#0a192f] pt-20 lg:pt-0"
     >
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col w-full h-full">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center h-full">
         <div className="pb-8">
+        <div className="flex py-4">
+                <a href="/" className="flex items-center text-white px-4 py-2 border border-white hover:bg-[#FF5757] hover:border-[#FF5757]">
+                    <HiArrowNarrowLeft />
+                    <span className="pl-4">Back to Home</span>
+                </a>
+            </div>
           <p className="inline text-4xl font-bold text-gray-300 border-b-4 border-[#FF5757]">
             Projects
           </p>
@@ -30,7 +35,7 @@ const Projects = () => {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {displayedProjects.map((item) => (
+          {project.map((item) => (
             <div
               key={item.id}
               className="shadow-lg shadow-[#040c16] container rounded-md content-div"
@@ -76,14 +81,6 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
-        <div className="flex justify-center pt-4">
-          <a
-            href="/projects"
-            className="bg-[#0a192f] text-white px-4 py-2 border border-white hover:bg-[#FF5757] hover:border-[#FF5757]"
-          >
-            View Full Projects
-          </a>
         </div>
       </div>
     </div>

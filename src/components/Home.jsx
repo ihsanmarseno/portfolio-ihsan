@@ -37,7 +37,7 @@ const Home = () => {
           {`Front-end and UI/UX Enthusiast.`}
         </p>
         <p
-          className="text-[#e4e4ee] py-4 max-w-[700px]"
+          className="text-[#e4e4ee] text-sm md:text-base pt-4 pb-2   max-w-[700px]"
           data-aos="fade-up"
           data-aos-delay="800"
         >
@@ -46,7 +46,7 @@ const Home = () => {
           projects`}
         </p>
         <div>
-          <Link to="projects" smooth={true} duration={1000}>
+          <Link to="projects" smooth={true} duration={800} offset={-90}>
             <button
               className="flex items-center px-6 py-3 my-2 text-white border-2 group hover:bg-[#FF5757] hover:border-[#FF5757]"
               data-aos="fade-right"
