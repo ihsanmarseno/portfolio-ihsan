@@ -105,11 +105,11 @@ const Projects = () => {
 
         <ReactPaginate
           breakLabel="..."
-          nextLabel="Next >"
+          nextLabel=">"
           onPageChange={handlePageClick}
           pageRangeDisplayed={3}
           pageCount={pageCount}
-          previousLabel="< Previous"
+          previousLabel="<"
           containerClassName="flex items-center justify-center mt-8"
           pageClassName="mx-2" // Set margin between page items
           pageLinkClassName="text-white px-3 py-2 rounded hover:bg-[#FF5757] z-0"
