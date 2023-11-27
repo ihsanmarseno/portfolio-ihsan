@@ -15,20 +15,20 @@ const Projects = () => {
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 4;
+  const router = useNavigate();
 
   useEffect(() => {
     AOS.init();
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(data.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(data.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage]);
+    window.scrollTo({ top: 0, behavior: 'smooth', duration:500 });
+  }, [itemOffset, itemsPerPage, router]);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % data.length;
     setItemOffset(newOffset);
   };
-
-  const router = useNavigate();
 
   const handleBack = (e) => {
     e.preventDefault();
