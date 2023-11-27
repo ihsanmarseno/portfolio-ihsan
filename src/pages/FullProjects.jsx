@@ -42,13 +42,13 @@ const Projects = () => {
           <div className="flex py-4">
             <button
               href="/"
-              className="flex items-center text-white hover:text-[#FF5757] hover:-rotate-45 duration-300"
+              className="flex items-center text-gray-300 hover:text-[#FF5757] hover:-rotate-45 duration-300"
               onClick={handleBack}
             >
               <HiArrowNarrowLeft className="w-6 h-6" />
             </button>
           </div>
-          <p className="inline md:text-4xl text-3xl font-bold text-gray-300 border-b-4 border-[#FF5757]">
+          <p className="inline md:text-4xl text-3xl font-bold text-white border-b-4 border-[#FF5757]">
             Projects
           </p>
           <p className="py-4">{`// Check out some of my recent projects`}</p>

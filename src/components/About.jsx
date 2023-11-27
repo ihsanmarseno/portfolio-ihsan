@@ -24,7 +24,7 @@ const About = () => {
           <div className="text-4xl font-bold sm:text-right place-self-center" data-aos="fade-up" data-aos-delay="200">
             <img src={Photo} alt="Ihsan Tri Marseno" className="w-48 rounded-full md:w-full" />
           </div>
-          <div className="flex items-center text-sm tracking-wide md:text-lg" data-aos="fade-right" data-aos-delay="400">
+          <div className="flex items-center text-sm tracking-wide text-gray-300 md:text-lg" data-aos="fade-right" data-aos-delay="400">
             <p>
               {`I'm Ihsan Tri Marseno, a 20-year-old with a passion for carving my
               career path in front-end development and UI/UX. While my primary
