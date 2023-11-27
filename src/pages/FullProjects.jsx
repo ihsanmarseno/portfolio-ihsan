@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { data } from "../data/data.js";
@@ -7,34 +7,55 @@ import { TbWorldShare } from "react-icons/tb";
 import { GrTechnology } from "react-icons/gr";
 import { MdConstruction } from "react-icons/md";
 import { HiArrowNarrowLeft } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
+import ReactPaginate from "react-paginate";
 
 const Projects = () => {
+  const [currentItems, setCurrentItems] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 4;
+
   useEffect(() => {
     AOS.init();
-  }, []);
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(data.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(data.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage]);
 
-  const project = data;
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % data.length;
+    setItemOffset(newOffset);
+  };
+
+  const router = useNavigate();
+
+  const handleBack = (e) => {
+    e.preventDefault();
+    router(-1);
+  };
 
   return (
-    <div
-      name="projects"
-      className="w-full h-full text-gray-300 bg-[#0a192f]"
-    >
-      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center h-full">
+    <div name="projects" className="w-full h-full text-gray-300 bg-[#0a192f]">
+      <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center min-h-screen">
         <div className="pb-8">
-        <div className="flex py-4">
-                <a href="/" className="flex items-center text-white hover:text-[#FF5757]">
-                    <HiArrowNarrowLeft className="w-8 h-8" />
-                </a>
-            </div>
-          <p className="inline text-4xl font-bold text-gray-300 border-b-4 border-[#FF5757]">
+          <div className="flex py-4">
+            <button
+              href="/"
+              className="flex items-center text-white hover:text-[#FF5757] hover:-rotate-45 duration-300"
+              onClick={handleBack}
+            >
+              <HiArrowNarrowLeft className="w-6 h-6" />
+            </button>
+          </div>
+          <p className="inline md:text-4xl text-3xl font-bold text-gray-300 border-b-4 border-[#FF5757]">
             Projects
           </p>
           <p className="py-4">{`// Check out some of my recent projects`}</p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {project.map((item) => (
+        <div className="grid gap-4 sm:grid-cols-2">
+          {currentItems.map((item) => (
             <div
               key={item.id}
               className="shadow-lg shadow-[#040c16] container rounded-md content-div"
@@ -65,7 +86,7 @@ const Projects = () => {
                   <p className="inline text-lg font-semibold border-b-2 border-[#ea9a9a]">
                     {item.name}
                   </p>
-                  <p className="text-sm text-[#a5a2a2] py-2">
+                  <p className="text-sm md:text-base text-[#a5a2a2] py-2">
                     {item?.description}
                   </p>
                 </div>
@@ -81,6 +102,23 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel="Next >"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={3}
+          pageCount={pageCount}
+          previousLabel="< Previous"
+          containerClassName="flex items-center justify-center mt-8"
+          pageClassName="mx-2" // Set margin between page items
+          pageLinkClassName="text-white px-3 py-2 rounded hover:bg-[#FF5757] z-0"
+          activeClassName="px-1 py-2 rounded z-100 bg-[#FF5757]"
+          previousClassName="mx-2"
+          nextClassName="mx-2"
+          previousLinkClassName="text-white bg-gray-800 px-3 py-2 rounded hover:bg-[#FF5757]"
+          nextLinkClassName="text-white bg-gray-800 px-3 py-2 rounded hover:bg-[#FF5757]"
+        />
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import { TbWorldShare } from "react-icons/tb";
 import { GrTechnology } from "react-icons/gr";
 import { MdConstruction } from "react-icons/md";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   useEffect(() => {
@@ -15,7 +16,7 @@ const Projects = () => {
 
   const project = data;
 
-  const displayedProjects = project.slice(0, 6);
+  const displayedProjects = project.slice(0, 4);
 
   return (
     <div
@@ -24,13 +25,13 @@ const Projects = () => {
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col w-full h-full">
         <div className="pb-8">
-          <p className="inline text-4xl font-bold text-gray-300 border-b-4 border-[#FF5757]">
+          <p className="inline md:text-4xl text-3xl  font-bold text-gray-300 border-b-4 border-[#FF5757]">
             Projects
           </p>
-          <p className="py-4">{`// Check out some of my recent projects`}</p>
+          <p className="py-4 text-sm md:text-lg">{`// Check out some of my recent projects`}</p>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           {displayedProjects.map((item) => (
             <div
               key={item.id}
@@ -59,10 +60,10 @@ const Projects = () => {
               </div>
               <div className="flex flex-col justify-between px-4 pt-4">
                 <div>
-                  <p className="inline text-lg font-semibold border-b-2 border-[#ea9a9a]">
+                  <p className="inline md:text-lg font-semibold border-b-2 border-[#ea9a9a]">
                     {item.name}
                   </p>
-                  <p className="text-sm text-[#a5a2a2] py-2">
+                  <p className="text-sm md:text-base text-[#a5a2a2] py-2">
                     {item?.description}
                   </p>
                 </div>
@@ -79,15 +80,15 @@ const Projects = () => {
           ))}
         </div>
         <div className="flex justify-center pt-8">
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="bg-[#0a192f] flex items-center text-white px-4 py-2 border group border-white hover:bg-[#FF5757] hover:border-[#FF5757]"
           >
             View Full Projects
             <span className="duration-300 group-hover:-rotate-45">
                 <HiArrowNarrowRight className="ml-3" />
               </span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

@@ -40,8 +40,8 @@ const Skills = () => {
     <div name='skills' className='w-full h-full bg-[#0a192f] text-gray-300 pt-20 lg:pt-0'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col w-full h-full'>
         <div>
-          <p className='inline text-4xl font-bold border-b-4 border-[#FF5757] '>Skills</p>
-          <p className='py-4'>{`// I leverage the following skills to create projects`}</p>
+          <p className='inline md:text-4xl text-3xl font-bold border-b-4 border-[#FF5757] '>Skills</p>
+          <p className='py-4 text-sm md:text-lg'>{`// I leverage the following skills to create projects`}</p>
         </div>
 
         <div className='grid w-full grid-cols-2 gap-4 pt-8 text-center sm:grid-cols-4'>

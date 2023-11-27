@@ -19,32 +19,49 @@ const Navbar = () => {
 
       {/* menu */}
       <ul className="hidden md:flex">
-        <li className="text-lg">
+        <li className="text-base lg:text-lg">
           <Link to="home" smooth={true} duration={500}>
             Home
           </Link>
         </li>
-        <li className="text-lg">
+        <li className="text-base lg:text-lg">
           <Link to="about" smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li className="text-lg">
+        <li className="text-base lg:text-lg">
           <Link to="skills" smooth={true} duration={500} offset={-100}>
             Skills
           </Link>
         </li>
-        <li className="text-lg">
+        <li className="text-base lg:text-lg">
           <Link to="projects" smooth={true} duration={500}>
             Projects
           </Link>
         </li>
-        <li className="text-lg">
+        <li className="text-base lg:text-lg">
           <Link to="contact" smooth={true} duration={500}>
             Contact
           </Link>
         </li>
+        
+      <div className="items-center hidden md:flex lg:hidden">
+          <a href="https://www.linkedin.com/in/ihsanmarseno/" className="mx-4 text-gray-300" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin size={20} />
+          </a>
+          <a href="https://github.com/ihsanmarseno" className="mx-4 text-gray-240" target="_blank" rel="noopener noreferrer">
+            <FaGithub size={20} />
+          </a>
+          <a href="mailto:ihsanmarseno09@gmail.com" className="mx-4 text-gray-200">
+            <HiOutlineMail size={20} />
+          </a>
+          <a href="https://drive.google.com/file/d/17KYfxK2_vPB7Q4gbjePbHHtQtkIgwDSj/view?usp=sharing" className="mx-4 text-gray-150">
+            <BsFillPersonLinesFill size={20} />
+          </a>
+        </div>
       </ul>
+
+      
 
       {/* Hamburger */}
       <div onClick={handleClick} className="z-10 md:hidden">
@@ -112,11 +129,11 @@ const Navbar = () => {
       </ul>
 
       {/* Social icons */}
-      <div className="hidden lg:flex fixed flex-col top-[35%] left-0 z-50">
+      <div className="hidden lg:flex fixed flex-col top-[35%] lg:left-0 z-50">
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
-              className="flex items-center justify-between w-full text-gray-300"
+              className="flex items-center justify-between w-full text-white"
               href="https://www.linkedin.com/in/ihsanmarseno/"
             >
               Linkedin <FaLinkedin size={30} />
@@ -124,7 +141,7 @@ const Navbar = () => {
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]">
             <a
-              className="flex items-center justify-between w-full text-gray-300"
+              className="flex items-center justify-between w-full text-white"
               href="https://github.com/ihsanmarseno"
             >
               Github <FaGithub size={30} />
@@ -132,7 +149,7 @@ const Navbar = () => {
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]">
             <a
-              className="flex items-center justify-between w-full text-gray-300"
+              className="flex items-center justify-between w-full text-white"
               href="mailto:ihsanmarseno09@gmail.com"
             >
               Email <HiOutlineMail size={30} />
@@ -140,7 +157,7 @@ const Navbar = () => {
           </li>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a
-              className="flex items-center justify-between w-full text-gray-300"
+              className="flex items-center justify-between w-full text-white"
               href="https://drive.google.com/file/d/17KYfxK2_vPB7Q4gbjePbHHtQtkIgwDSj/view?usp=sharing"
             >
               CV <BsFillPersonLinesFill size={30} />

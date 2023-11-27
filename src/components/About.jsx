@@ -14,7 +14,7 @@ const About = () => {
       <div className="flex flex-col items-center justify-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="pb-8 pl-4 sm:text-center">
-            <p className="inline text-4xl font-bold border-b-4 border-[#FF5757]">
+            <p className="inline md:text-4xl font-bold border-b-4 border-[#FF5757] text-3xl">
               About
             </p>
           </div>
@@ -24,7 +24,7 @@ const About = () => {
           <div className="text-4xl font-bold sm:text-right place-self-center" data-aos="fade-up" data-aos-delay="200">
             <img src={Photo} alt="Ihsan Tri Marseno" className="w-48 rounded-full md:w-full" />
           </div>
-          <div className="flex items-center text-base lg:tracking-wide lg:text-lg" data-aos="fade-right" data-aos-delay="400">
+          <div className="flex items-center text-sm tracking-wide md:text-lg" data-aos="fade-right" data-aos-delay="400">
             <p>
               {`I'm Ihsan Tri Marseno, a 20-year-old with a passion for carving my
               career path in front-end development and UI/UX. While my primary

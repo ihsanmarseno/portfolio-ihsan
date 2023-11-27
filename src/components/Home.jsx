@@ -48,7 +48,7 @@ const Home = () => {
         <div>
           <Link to="projects" smooth={true} duration={800} offset={-90}>
             <button
-              className="flex items-center px-6 py-3 my-2 text-white border-2 group hover:bg-[#FF5757] hover:border-[#FF5757]"
+              className="flex items-center px-6 py-2 my-2 text-white border-2 group hover:bg-[#FF5757] hover:border-[#FF5757]"
               data-aos="fade-right"
               data-aos-delay="1000"
             >
