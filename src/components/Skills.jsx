@@ -37,7 +37,7 @@ const Skills = () => {
 
 
   return (
-    <div name='skills' className='w-full h-full bg-[#0a192f] text-gray-300 pt-20 lg:pt-0'>
+    <div name='skills' className='w-full h-full bg-[#0a192f] text-white pt-20 lg:pt-0'>
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col w-full h-full'>
         <div>
           <p className='inline md:text-4xl text-3xl font-bold border-b-4 border-[#FF5757] '>Skills</p>

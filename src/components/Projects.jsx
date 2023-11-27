@@ -25,7 +25,7 @@ const Projects = () => {
     >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col w-full h-full">
         <div className="pb-8">
-          <p className="inline md:text-4xl text-3xl  font-bold text-gray-300 border-b-4 border-[#FF5757]">
+          <p className="inline md:text-4xl text-3xl font-bold text-white border-b-4 border-[#FF5757]">
             Projects
           </p>
           <p className="py-4 text-sm md:text-lg">{`// Check out some of my recent projects`}</p>
