@@ -51,7 +51,7 @@ const Projects = () => {
           <p className="inline md:text-4xl text-3xl font-bold text-white border-b-4 border-[#FF5757]">
             Projects
           </p>
-          <p className="py-4">{`// Check out some of my recent projects`}</p>
+          <p className="py-4">{`//There are ${data.length} projects that I have worked on in the front-end and UI/UX fields`}</p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">

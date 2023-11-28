@@ -31,7 +31,7 @@ const About = () => {
               focus is on front-end, I'm intrigued by the dynamic world of
               UI/UX. During my leisure time, I dedicate myself to honing my
               skills in these domains, constantly seeking to refine and expand
-              my knowledge`}
+              my knowledge.`}
             </p>
           </div>
         </div>
