@@ -48,7 +48,7 @@ const About = () => {
               skills in these domains, constantly seeking to refine and expand
               my knowledge.`}
             </p>
-            <p className="mt-4 md:mt-8 text-base md:text-xl text-[#2ea4ff] font-medium tracking-wider">
+            <p className="mt-4 md:mt-8 text-base md:text-xl text-[#2ea4ff] font-semibold tracking-wider">
               Current Favorite Tech:{" "}
             </p>
             <div className="flex items-center w-8 h-8 gap-4 md:h-12 md:w-12">
