@@ -1,8 +1,9 @@
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { useEffect } from "react";
-import 'aos/dist/aos.css'; 
-import AOS from 'aos';
+import "aos/dist/aos.css";
+import AOS from "aos";
+import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
   useEffect(() => {
@@ -10,31 +11,24 @@ const Home = () => {
   }, []);
 
   return (
-    <div
-      className="w-full h-screen bg-[#0a192f]" name="home"
-    >
+    <div className="w-full h-screen bg-[#0a192f]" name="home">
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full">
-        <p
-          className="text-2xl text-[#FF5757] font-semibold"
-          data-aos="fade-up"
-          data-aos-delay="200" 
-        >
-          Hello,
-        </p>
+        <TypeAnimation
+          sequence={["Front-end Enthusiast", 1000, "UI/UX Enthusiast", 1000, "Technology Enthusiast", 1000]}
+          repeat={Infinity}
+          className="text-xl md:text-4xl font-bold text-[#2ea4ff]"
+        />
+
         <p
           className="text-3xl md:text-5xl lg:text-7xl font-bold text-[#f5f7ff]"
           data-aos="fade-up"
           data-aos-delay="400"
         >
           Ihsan Tri Marseno
-          <span className="text-[#FF5757] text-lg md:text-2xl"> {`'s here`}</span>
-        </p>
-        <p
-          className="text-xl md:text-4xl font-bold text-[#2ea4ff]"
-          data-aos="fade-right"
-          data-aos-delay="600"
-        >
-          {`Front-end and UI/UX Enthusiast.`}
+          <span className="text-[#FF5757] text-lg md:text-2xl">
+            {" "}
+            {`'s here`}
+          </span>
         </p>
         <p
           className="text-[#e4e4ee] text-sm md:text-base pt-4 pb-2   max-w-[700px]"
