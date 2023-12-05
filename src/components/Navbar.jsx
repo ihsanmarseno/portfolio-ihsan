@@ -55,7 +55,7 @@ const Navbar = () => {
           <a href="mailto:ihsanmarseno09@gmail.com" className="mx-4 text-gray-200">
             <HiOutlineMail size={20} />
           </a>
-          <a href="https://drive.google.com/file/d/1rjIzfUCAf_u2DdISQFQ4FRRB2njUQLic/view?usp=sharing" className="mx-4 text-gray-150">
+          <a href="https://drive.google.com/file/d/1PSsrjvHyZ6vdsuITvVT-KO0d_1sY_YHp/view?usp=sharing" className="mx-4 text-gray-150">
             <BsFillPersonLinesFill size={20} />
           </a>
         </div>
@@ -122,7 +122,7 @@ const Navbar = () => {
           <a href="mailto:ihsanmarseno09@gmail.com" className="mx-4 text-gray-300">
             <HiOutlineMail size={30} />
           </a>
-          <a href="https://drive.google.com/file/d/1rjIzfUCAf_u2DdISQFQ4FRRB2njUQLic/view?usp=sharing" className="mx-4 text-gray-300">
+          <a href="https://drive.google.com/file/d/1PSsrjvHyZ6vdsuITvVT-KO0d_1sY_YHp/view?usp=sharing" className="mx-4 text-gray-300">
             <BsFillPersonLinesFill size={30} />
           </a>
         </div>
@@ -158,7 +158,7 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
             <a
               className="flex items-center justify-between w-full text-white"
-              href="https://drive.google.com/file/d/1rjIzfUCAf_u2DdISQFQ4FRRB2njUQLic/view?usp=sharing"
+              href="https://drive.google.com/file/d/1PSsrjvHyZ6vdsuITvVT-KO0d_1sY_YHp/view?usp=sharing"
             >
               CV <BsFillPersonLinesFill size={30} />
             </a>
