@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Photo from "../assets/photo-profile.png";
+import Photo from "../assets/photo-profile2.png";
 import Next from "../assets/next.png";
 import React from "../assets/react.png";
 import Tailwind from "../assets/tailwind.png";
