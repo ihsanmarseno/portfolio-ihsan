@@ -9,6 +9,8 @@ import { MdConstruction } from "react-icons/md";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 import ReactPaginate from "react-paginate";
+import { Tooltip } from "react-tippy";
+import "react-tippy/dist/tippy.css";
 
 const Projects = () => {
   const [currentItems, setCurrentItems] = useState([]);
@@ -22,7 +24,7 @@ const Projects = () => {
     const endOffset = itemOffset + itemsPerPage;
     setCurrentItems(data.slice(itemOffset, endOffset));
     setPageCount(Math.ceil(data.length / itemsPerPage));
-    window.scrollTo({ top: 0, behavior: 'smooth', duration:500 });
+    window.scrollTo({ top: 0, behavior: "smooth", duration: 500 });
   }, [itemOffset, itemsPerPage, router]);
 
   const handlePageClick = (event) => {
@@ -55,6 +57,10 @@ const Projects = () => {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
+          <style>{`
+        .tippy-tooltip {
+          background-color: rgb(31, 41, 55); /* Ganti dengan warna RGB yang diinginkan */
+        }`}</style>
           {currentItems.map((item) => (
             <div
               key={item.id}
@@ -67,17 +73,45 @@ const Projects = () => {
                 </button>
                 <div className="flex items-center gap-2 cursor-pointer">
                   {item.github && (
-                    <a href={item.github}>
-                      <FaGithub className="w-6 h-6" />
-                    </a>
+                    <Tooltip
+                      title="GitHub"
+                      position="top"
+                      arrow={true}
+                      duration={300}
+                      className="relative group "
+                    >
+                      <a href={item.github}>
+                        <FaGithub className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
+                      </a>
+                    </Tooltip>
                   )}
+
                   {item.live && (
-                    <a href={item.live}>
-                      <TbWorldShare className="w-6 h-6" />
-                    </a>
+                    <Tooltip
+                      title="Live Web"
+                      position="top"
+                      arrow={true}
+                      duration={300}
+                      className="relative group "
+                    >
+                      <a href={item.live}>
+                        <TbWorldShare className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
+                      </a>
+                    </Tooltip>
                   )}
+
                   {!item.github && !item.live && (
-                    <MdConstruction className="w-6 h-6" />
+                    <Tooltip
+                      title="Under Construction"
+                      position="top"
+                      arrow={true}
+                      duration={300}
+                      className="relative group"
+                    >
+                      <div className="relative group ">
+                        <MdConstruction className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
+                      </div>
+                    </Tooltip>
                   )}
                 </div>
               </div>

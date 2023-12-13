@@ -8,6 +8,8 @@ import { GrTechnology } from "react-icons/gr";
 import { MdConstruction } from "react-icons/md";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tippy";
+import "react-tippy/dist/tippy.css";
 
 const Projects = () => {
   useEffect(() => {
@@ -32,6 +34,10 @@ const Projects = () => {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
+          <style>{`
+        .tippy-tooltip {
+          background-color: rgb(31, 41, 55); /* Ganti dengan warna RGB yang diinginkan */
+        }`}</style>
           {displayedProjects.map((item) => (
             <div
               key={item.id}
@@ -44,23 +50,51 @@ const Projects = () => {
                 </button>
                 <div className="flex items-center gap-2 cursor-pointer">
                   {item.github && (
-                    <a href={item.github}>
-                      <FaGithub className="w-6 h-6" />
-                    </a>
+                    <Tooltip
+                      title="GitHub"
+                      position="top"
+                      arrow={true}
+                      duration={300}
+                      className="relative group "
+                    >
+                      <a href={item.github}>
+                        <FaGithub className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
+                      </a>
+                    </Tooltip>
                   )}
+
                   {item.live && (
-                    <a href={item.live}>
-                      <TbWorldShare className="w-6 h-6" />
-                    </a>
+                    <Tooltip
+                      title="Live Web"
+                      position="top"
+                      arrow={true}
+                      duration={300}
+                      className="relative group "
+                    >
+                      <a href={item.live}>
+                        <TbWorldShare className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
+                      </a>
+                    </Tooltip>
                   )}
+
                   {!item.github && !item.live && (
-                    <MdConstruction className="w-6 h-6" />
+                    <Tooltip
+                      title="Under Construction"
+                      position="top"
+                      arrow={true}
+                      duration={300}
+                      className="relative group"
+                    >
+                      <div className="relative group ">
+                        <MdConstruction className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
+                      </div>
+                    </Tooltip>
                   )}
                 </div>
               </div>
               <div className="flex flex-col justify-between px-4 pt-4">
                 <div>
-                  <p className="inline md:text-lg font-semibold border-b-2 border-[#ea9a9a]">
+                  <p className="inline text-lg font-semibold border-b-2 border-[#ea9a9a]">
                     {item.name}
                   </p>
                   <p className="text-sm md:text-base text-[#a5a2a2] py-2">
@@ -86,8 +120,8 @@ const Projects = () => {
           >
             View Full Projects
             <span className="duration-300 group-hover:-rotate-45">
-                <HiArrowNarrowRight className="ml-3" />
-              </span>
+              <HiArrowNarrowRight className="ml-3" />
+            </span>
           </Link>
         </div>
       </div>
