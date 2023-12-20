@@ -36,7 +36,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="text-base lg:text-lg">
-          <Link to="skills" smooth={true} duration={500}>
+          <Link to="skills" smooth={true} duration={500} offset={-100}>
             Skills
           </Link>
         </li>
