@@ -8,18 +8,12 @@ import { GrTechnology } from "react-icons/gr";
 import { MdConstruction } from "react-icons/md";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
-import ReactPaginate from "react-paginate";
 import { Tooltip } from "react-tippy";
 import "react-tippy/dist/tippy.css";
 
-// ... (existing imports)
-
 const Projects = () => {
   const [currentItems, setCurrentItems] = useState([]);
-  const [pageCount, setPageCount] = useState(0);
-  const [itemOffset, setItemOffset] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState("");
-  const itemsPerPage = 4;
   const router = useNavigate();
 
   useEffect(() => {
@@ -28,20 +22,19 @@ const Projects = () => {
       ? data.filter((item) => item.field === selectedCategory)
       : data;
 
-    const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(filteredData.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(filteredData.length / itemsPerPage));
-    window.scrollTo({ top: 0, behavior: "smooth", duration: 500 });
-  }, [itemOffset, itemsPerPage, router, selectedCategory]);
+    // Menggunakan semua data tanpa pembagian halaman
+    setCurrentItems(filteredData);
 
-  const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % data.length;
-    setItemOffset(newOffset);
-  };
+    window.scrollTo({ top: 0, behavior: "smooth", duration: 500 });
+  }, [selectedCategory]);
 
   const handleBack = (e) => {
     e.preventDefault();
     router(-1);
+  };
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
   };
 
   return (
@@ -69,7 +62,7 @@ const Projects = () => {
             className={`category-button ${
               selectedCategory === "" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
             }`}
-            onClick={() => setSelectedCategory("")}
+            onClick={() => handleCategoryChange("")}
           >
             All
           </button>
@@ -77,7 +70,7 @@ const Projects = () => {
             className={`category-button ${
               selectedCategory === "Front-end Web" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
             }`}
-            onClick={() => setSelectedCategory("Front-end Web")}
+            onClick={() => handleCategoryChange("Front-end Web")}
           >
             Front-end Web
           </button>
@@ -85,7 +78,7 @@ const Projects = () => {
             className={`category-button ${
               selectedCategory === "Front-end Mobile" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
             }`}
-            onClick={() => setSelectedCategory("Front-end Mobile")}
+            onClick={() => handleCategoryChange("Front-end Mobile")}
           >
             Front-end Mobile
           </button>
@@ -93,7 +86,7 @@ const Projects = () => {
             className={`category-button ${
               selectedCategory === "UI/UX" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
             }`}
-            onClick={() => setSelectedCategory("UI/UX")}
+            onClick={() => handleCategoryChange("UI/UX")}
           >
             UI/UX
           </button>
@@ -180,23 +173,6 @@ const Projects = () => {
             </div>
           ))}
         </div>
-
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel=">"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={3}
-          pageCount={pageCount}
-          previousLabel="<"
-          containerClassName="flex items-center justify-center mt-8"
-          pageClassName="mx-2"
-          pageLinkClassName="text-white px-3 py-2 rounded hover:bg-[#FF5757] z-0"
-          activeClassName="px-1 py-2 rounded z-100 bg-[#FF5757]"
-          previousClassName="mx-2"
-          nextClassName="mx-2"
-          previousLinkClassName="text-white bg-gray-800 px-3 py-2 rounded hover:bg-[#FF5757]"
-          nextLinkClassName="text-white bg-gray-800 px-3 py-2 rounded hover:bg-[#FF5757]"
-        />
       </div>
     </div>
   );
