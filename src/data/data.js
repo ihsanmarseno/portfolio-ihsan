@@ -1,6 +1,16 @@
 export const data = [
   {
     id: 1,
+    name: "Aplikasi Pencatat Pelanggaran",
+    field: "Front-end Mobile",
+    description:
+      "Aplikasi Pencatat Pelanggaran for UPNVJ's computer science faculty provides authentication, CRUD functionality for adding/updating violation points and personal data, and supports data reading and deletion. Streamlining disciplinary management, this user-friendly app ensures an efficient approach to recording and handling violations.",
+    github: "https://github.com/ihsanmarseno/aplikasi-pencatat-pelanggaran",
+    live: "",
+    technologies: "Java, XML, Google Material, SQLite",
+  },
+  {
+    id: 2,
     name: "Marseno (Personal Website)",
     field: "Front-end Web",
     description:
@@ -10,7 +20,7 @@ export const data = [
     technologies: "React + Vite, Tailwind CSS, AOS",
   },
   {
-    id: 2,
+    id: 3,
     name: "Movlie Movies API TMDB",
     field: "Front-end Web",
     description:
@@ -20,7 +30,7 @@ export const data = [
     technologies: "Next Js, Tailwind CSS, daisy UI",
   },
   {
-    id: 3,
+    id: 4,
     name: "URL Shortener Link.io",
     field: "Front-end Web",
     description:
@@ -30,7 +40,7 @@ export const data = [
     technologies: "Next Js, Tailwind CSS, Typescript",
   },
   {
-    id: 4,
+    id: 5,
     name: "2022 World Cup Schedule API",
     field: "Front-end Web",
     description:
@@ -40,7 +50,7 @@ export const data = [
     technologies: "Next Js, Tailwind CSS, Typescript, Framer-Motion",
   },
   {
-    id: 5,
+    id: 6,
     name: "Aplikasi Catatanku",
     field: "Front-end Web",
     description:
@@ -50,7 +60,7 @@ export const data = [
     technologies: "React + Vite, Bootstrap",
   },
   {
-    id: 6,
+    id: 7,
     name: "Al Nasr Desktop Website",
     field: "Front-end Web",
     description:
@@ -60,7 +70,7 @@ export const data = [
     technologies: "React + Vite, Tailwind CSS",
   },
   {
-    id: 7,
+    id: 8,
     name: "Finance Data Responsive Website",
     field: "Front-end Web",
     description:
@@ -70,7 +80,7 @@ export const data = [
     technologies: "React + Vite, Tailwind CSS",
   },
   {
-    id: 8,
+    id: 9,
     name: "Bookshelf Apps",
     field: "Front-end Web",
     description:
@@ -81,7 +91,7 @@ export const data = [
   },
 
   {
-    id: 9,
+    id: 10,
     name: "Kantin Kejujuran",
     field: "UI/UX",
     description:
@@ -91,7 +101,7 @@ export const data = [
     technologies: "Figma",
   },
   {
-    id: 10,
+    id: 11,
     name: "Kantin Kejujuran (Mobile Version)",
     field: "UI/UX",
     description:
@@ -101,7 +111,7 @@ export const data = [
     technologies: "Figma",
   },
   {
-    id: 11,
+    id: 12,
     name: "Cholestrolens App",
     field: "UI/UX",
     description:
