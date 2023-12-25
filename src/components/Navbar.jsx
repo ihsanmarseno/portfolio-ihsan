@@ -104,6 +104,8 @@ const Navbar = () => {
             <a
               href="mailto:ihsanmarseno09@gmail.com"
               className="mx-4 text-gray-200"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <HiOutlineMail
                 size={20}
@@ -121,6 +123,8 @@ const Navbar = () => {
             <a
               href="https://drive.google.com/file/d/1PSsrjvHyZ6vdsuITvVT-KO0d_1sY_YHp/view?usp=sharing"
               className="mx-4 text-gray-150"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <BsFillPersonLinesFill
                 size={20}
@@ -131,8 +135,8 @@ const Navbar = () => {
         </div>
       </ul>
 
-     {/* Hamburger / Close button */}
-     <motion.div
+      {/* Hamburger / Close button */}
+      <motion.div
         onClick={toggleMobileNav}
         className="z-10 md:hidden"
         initial={false}
@@ -296,6 +300,8 @@ const Navbar = () => {
                   <a
                     href="mailto:ihsanmarseno09@gmail.com"
                     className="mx-4 text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <HiOutlineMail
                       size={30}
@@ -313,6 +319,8 @@ const Navbar = () => {
                   <a
                     href="https://drive.google.com/file/d/1PSsrjvHyZ6vdsuITvVT-KO0d_1sY_YHp/view?usp=sharing"
                     className="mx-4 text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <BsFillPersonLinesFill
                       size={30}
@@ -333,6 +341,8 @@ const Navbar = () => {
             <a
               className="flex items-center justify-between w-full text-white"
               href="https://www.linkedin.com/in/ihsanmarseno/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -341,6 +351,8 @@ const Navbar = () => {
             <a
               className="flex items-center justify-between w-full text-white"
               href="https://github.com/ihsanmarseno"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Github <FaGithub size={30} />
             </a>
@@ -349,6 +361,8 @@ const Navbar = () => {
             <a
               className="flex items-center justify-between w-full text-white"
               href="mailto:ihsanmarseno09@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Email <HiOutlineMail size={30} />
             </a>
@@ -357,6 +371,8 @@ const Navbar = () => {
             <a
               className="flex items-center justify-between w-full text-white"
               href="https://drive.google.com/file/d/1PSsrjvHyZ6vdsuITvVT-KO0d_1sY_YHp/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               CV <BsFillPersonLinesFill size={30} />
             </a>

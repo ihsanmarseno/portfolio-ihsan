@@ -60,7 +60,9 @@ const Projects = () => {
         <div className="flex flex-wrap gap-4 mb-4 text-base">
           <button
             className={`category-button ${
-              selectedCategory === "" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
+              selectedCategory === ""
+                ? "active bg-[#EAD196] text-black px-4 py-2"
+                : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
             }`}
             onClick={() => handleCategoryChange("")}
           >
@@ -68,7 +70,9 @@ const Projects = () => {
           </button>
           <button
             className={`category-button ${
-              selectedCategory === "Front-end Web" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
+              selectedCategory === "Front-end Web"
+                ? "active bg-[#EAD196] text-black px-4 py-2"
+                : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
             }`}
             onClick={() => handleCategoryChange("Front-end Web")}
           >
@@ -76,7 +80,9 @@ const Projects = () => {
           </button>
           <button
             className={`category-button ${
-              selectedCategory === "Front-end Mobile" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
+              selectedCategory === "Front-end Mobile"
+                ? "active bg-[#EAD196] text-black px-4 py-2"
+                : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
             }`}
             onClick={() => handleCategoryChange("Front-end Mobile")}
           >
@@ -84,7 +90,9 @@ const Projects = () => {
           </button>
           <button
             className={`category-button ${
-              selectedCategory === "UI/UX" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
+              selectedCategory === "UI/UX"
+                ? "active bg-[#EAD196] text-black px-4 py-2"
+                : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
             }`}
             onClick={() => handleCategoryChange("UI/UX")}
           >
@@ -117,7 +125,11 @@ const Projects = () => {
                       duration={300}
                       className="relative group "
                     >
-                      <a href={item.github}>
+                      <a
+                        href={item.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <FaGithub className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
                       </a>
                     </Tooltip>
@@ -131,7 +143,11 @@ const Projects = () => {
                       duration={300}
                       className="relative group "
                     >
-                      <a href={item.live}>
+                      <a
+                        href={item.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <TbWorldShare className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
                       </a>
                     </Tooltip>

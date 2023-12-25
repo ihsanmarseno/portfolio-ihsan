@@ -57,7 +57,11 @@ const Projects = () => {
                       duration={300}
                       className="relative group "
                     >
-                      <a href={item.github}>
+                      <a
+                        href={item.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <FaGithub className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
                       </a>
                     </Tooltip>
@@ -71,7 +75,11 @@ const Projects = () => {
                       duration={300}
                       className="relative group "
                     >
-                      <a href={item.live}>
+                      <a
+                        href={item.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <TbWorldShare className="w-6 h-6 group-hover:text-[#FF5757] transition-colors duration-300" />
                       </a>
                     </Tooltip>

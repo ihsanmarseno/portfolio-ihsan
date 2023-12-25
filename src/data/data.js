@@ -53,8 +53,9 @@ export const data = [
     id: 6,
     name: "Aplikasi Catatanku",
     field: "Front-end Web",
-    description:
-      "Aplikasi Catatanku is a website for creating, displaying, and deleting notes, this project is to complete the React Developer course in Dicoding. ",
+    description: `
+      Aplikasi Catatanku is a note-taking app with basic CRUD functionality built using React, Vite, and Bootstrap. It stores data locally using LocalStorage, allowing users to easily create, read, update, and delete notes. The application offers a simple and responsive interface for efficient note management.
+    `,
     github: "https://github.com/ihsanmarseno/react-dicoding-basic",
     live: "https://react-dicoding-basic.vercel.app/",
     technologies: "React + Vite, Bootstrap",
