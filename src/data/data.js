@@ -7,7 +7,7 @@ export const data = [
       "Aplikasi Pencatat Pelanggaran for UPNVJ's computer science faculty provides authentication, CRUD functionality for adding/updating violation points and personal data, and supports data reading and deletion. Streamlining disciplinary management, this user-friendly app ensures an efficient approach to recording and handling violations.",
     github: "https://github.com/ihsanmarseno/aplikasi-pencatat-pelanggaran",
     live: "",
-    technologies: "Java, XML, Google Material, SQLite",
+    technologies: "Java, XML, Material Design, SQLite",
   },
   {
     id: 2,
