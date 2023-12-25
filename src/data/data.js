@@ -2,7 +2,7 @@ export const data = [
   {
     id: 1,
     name: "Marseno (Personal Website)",
-    field: "Front-end",
+    field: "Front-end Web",
     description:
       "Marseno is my personal website, named after my distinctive surname. It features a portfolio of projects I've worked on, information about me, my skill set, and a contact section for potential collaborations. The website is built using React + Vite for efficient development and Tailwind CSS for sleek and responsive design.",
     github: "https://github.com/ihsanmarseno/portfolio-ihsan",
@@ -12,7 +12,7 @@ export const data = [
   {
     id: 2,
     name: "Movlie Movies API TMDB",
-    field: "Front-end",
+    field: "Front-end Web",
     description:
       "Movlie Movies is a website designed to showcase lists of popular movies, upcoming releases, and currently playing films. Additionally, it offers search functionality and detailed information for each movie. Leveraging Next.js 13 and Tailwind CSS technologies, Movlie Movies provides a responsive and contemporary user experience for exploring the world of cinema.",
     github: "https://github.com/ihsanmarseno/movie-api",
@@ -22,7 +22,7 @@ export const data = [
   {
     id: 3,
     name: "URL Shortener Link.io",
-    field: "Front-end",
+    field: "Front-end Web",
     description:
       "Link.io is a website designed for URL shortening, utilizing an Open Source API for the purpose. This platform is particularly adept at handling numerous endpoints for URLs. The technology stack includes Next.js 13, TypeScript, and Tailwind CSS.",
     github: "https://github.com/ihsanmarseno/final-project-ksm",
@@ -32,7 +32,7 @@ export const data = [
   {
     id: 4,
     name: "2022 World Cup Schedule API",
-    field: "Front-end",
+    field: "Front-end Web",
     description:
       "The 2022 World Cup Schedule is a website designed to showcase the football match schedule for the year-end 2022 World Cup. It includes details such as play dates, country names, and final scores. This project leverages the worldcupjson.net and FIFA API. The technology stack comprises Next.js 13, Tailwind CSS, and TypeScript.",
     github: "https://github.com/ihsanmarseno/jadwal-pildun",
@@ -42,7 +42,7 @@ export const data = [
   {
     id: 5,
     name: "Aplikasi Catatanku",
-    field: "Front-end",
+    field: "Front-end Web",
     description:
       "Aplikasi Catatanku is a website for creating, displaying, and deleting notes, this project is to complete the React Developer course in Dicoding. ",
     github: "https://github.com/ihsanmarseno/react-dicoding-basic",
@@ -52,7 +52,7 @@ export const data = [
   {
     id: 6,
     name: "Al Nasr Desktop Website",
-    field: "Front-end",
+    field: "Front-end Web",
     description:
       "Al Nasr is a website catering to travel arrangements for Hajj and Umrah pilgrimages. The design inspiration is derived from codedesign.dev. Al Nasr is optimized for desktop use and is built using React + Vite technology along with Tailwind CSS for styling.",
     github: "https://github.com/ihsanmarseno/al-nasr",
@@ -62,7 +62,7 @@ export const data = [
   {
     id: 7,
     name: "Finance Data Responsive Website",
-    field: "Front-end",
+    field: "Front-end Web",
     description:
       "Finance Data is a website dedicated to monitoring and analyzing data to enhance income on the BTB, BTC, and SASS platforms. It offers various subscription options for customers. The website is responsive, utilizing the technology stack of React + Vite, along with Tailwind CSS for styling.",
     github: "https://github.com/ihsanmarseno/finance-data-responsive",
@@ -72,7 +72,7 @@ export const data = [
   {
     id: 8,
     name: "Bookshelf Apps",
-    field: "Front-end",
+    field: "Front-end Web",
     description:
       "Bookshelf Apps is a book note application designed for tracking reading progress. It features two distinct sections, namely 'To Read' and 'Completed,' allowing users to seamlessly transition books between these categories. Users have the flexibility to navigate, search for specific books, and effortlessly remove entries from both sections.",
     github: "https://github.com/ihsanmarseno/bookshelf-apps",

@@ -12,20 +12,27 @@ import ReactPaginate from "react-paginate";
 import { Tooltip } from "react-tippy";
 import "react-tippy/dist/tippy.css";
 
+// ... (existing imports)
+
 const Projects = () => {
   const [currentItems, setCurrentItems] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   const [itemOffset, setItemOffset] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState("");
   const itemsPerPage = 4;
   const router = useNavigate();
 
   useEffect(() => {
     AOS.init();
+    const filteredData = selectedCategory
+      ? data.filter((item) => item.field === selectedCategory)
+      : data;
+
     const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(data.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(data.length / itemsPerPage));
+    setCurrentItems(filteredData.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(filteredData.length / itemsPerPage));
     window.scrollTo({ top: 0, behavior: "smooth", duration: 500 });
-  }, [itemOffset, itemsPerPage, router]);
+  }, [itemOffset, itemsPerPage, router, selectedCategory]);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % data.length;
@@ -56,11 +63,48 @@ const Projects = () => {
           <p className="py-4">{`//There are ${data.length} projects that I have worked on in the front-end and UI/UX fields`}</p>
         </div>
 
+        {/* Category Buttons */}
+        <div className="flex flex-wrap gap-4 mb-4 text-base">
+          <button
+            className={`category-button ${
+              selectedCategory === "" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
+            }`}
+            onClick={() => setSelectedCategory("")}
+          >
+            All
+          </button>
+          <button
+            className={`category-button ${
+              selectedCategory === "Front-end Web" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
+            }`}
+            onClick={() => setSelectedCategory("Front-end Web")}
+          >
+            Front-end Web
+          </button>
+          <button
+            className={`category-button ${
+              selectedCategory === "Front-end Mobile" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
+            }`}
+            onClick={() => setSelectedCategory("Front-end Mobile")}
+          >
+            Front-end Mobile
+          </button>
+          <button
+            className={`category-button ${
+              selectedCategory === "UI/UX" ? "active bg-[#EAD196] text-black px-4 py-2" : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
+            }`}
+            onClick={() => setSelectedCategory("UI/UX")}
+          >
+            UI/UX
+          </button>
+        </div>
+
         <div className="grid gap-4 sm:grid-cols-2">
           <style>{`
-        .tippy-tooltip {
-          background-color: rgb(31, 41, 55); /* Ganti dengan warna RGB yang diinginkan */
-        }`}</style>
+            .tippy-tooltip {
+              background-color: rgb(31, 41, 55);
+            }
+          `}</style>
           {currentItems.map((item) => (
             <div
               key={item.id}
@@ -145,7 +189,7 @@ const Projects = () => {
           pageCount={pageCount}
           previousLabel="<"
           containerClassName="flex items-center justify-center mt-8"
-          pageClassName="mx-2" // Set margin between page items
+          pageClassName="mx-2"
           pageLinkClassName="text-white px-3 py-2 rounded hover:bg-[#FF5757] z-0"
           activeClassName="px-1 py-2 rounded z-100 bg-[#FF5757]"
           previousClassName="mx-2"
