@@ -185,7 +185,7 @@ const Navbar = () => {
                   },
                 },
               }}
-              className="absolute top-0 left-0 w-full h-screen bg-[#EAD196] flex flex-col justify-center text-black items-center z-40"
+              className="absolute top-0 left-0 w-full h-screen bg-[#ff5757] flex flex-col justify-center text-white items-center z-40"
             >
               {/* Close button for mobile */}
               <motion.div
