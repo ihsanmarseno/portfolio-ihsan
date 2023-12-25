@@ -14,18 +14,25 @@ const Home = () => {
     <div className="w-full h-screen bg-[#0a192f]" name="home">
       <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full">
         <TypeAnimation
-          sequence={["Front-end Enthusiast", 1000, "UI/UX Enthusiast", 1000, "Technology Enthusiast", 1000]}
+          sequence={[
+            "Front-end Enthusiast",
+            1000,
+            "UI/UX Enthusiast",
+            1000,
+            "Technology Enthusiast",
+            1000,
+          ]}
           repeat={Infinity}
-          className="text-xl md:text-4xl font-bold text-[#2ea4ff]"
+          className="text-xl md:text-4xl font-bold text-[#EAD196]"
         />
 
-        <p
+<p
           className="text-3xl md:text-5xl lg:text-7xl font-bold text-[#f5f7ff]"
           data-aos="fade-up"
           data-aos-delay="400"
         >
           Ihsan Tri Marseno
-          <span className="text-[#FF5757] text-lg md:text-2xl">
+          <span className="text-[#EAD196] text-lg md:text-2xl">
             {" "}
             {`'s here`}
           </span>

@@ -117,7 +117,7 @@ const Projects = () => {
               </div>
               <div className="flex flex-col justify-between px-4 pt-4">
                 <div>
-                  <p className="inline text-lg font-semibold border-b-2 border-[#ea9a9a]">
+                  <p className="inline text-lg font-semibold border-b-2 border-[#EAD196]">
                     {item.name}
                   </p>
                   <p className="text-sm md:text-base text-[#a5a2a2] py-2">

@@ -8,10 +8,14 @@ import Logo from "../assets/marseno1.png";
 import { Link } from "react-scroll";
 import { Tooltip } from "react-tippy";
 import "react-tippy/dist/tippy.css";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const handleClick = () => setNav(!nav);
+  const [mobileNav, setMobileNav] = useState(false);
+
+  const toggleMobileNav = () => {
+    setMobileNav(!mobileNav);
+  };
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-50">
@@ -127,126 +131,200 @@ const Navbar = () => {
         </div>
       </ul>
 
-      {/* Hamburger */}
-      <div onClick={handleClick} className="z-10 md:hidden">
-        {!nav ? <HiMiniBars3 size={28} /> : null}
-      </div>
+     {/* Hamburger / Close button */}
+     <motion.div
+        onClick={toggleMobileNav}
+        className="z-10 md:hidden"
+        initial={false}
+        animate={mobileNav ? "close" : "hamburger"}
+      >
+        <motion.div
+          className="icon"
+          variants={{
+            hamburger: { rotate: 0 },
+            close: { rotate: 180 },
+          }}
+        >
+          {mobileNav ? <IoMdClose size={28} /> : <HiMiniBars3 size={28} />}
+        </motion.div>
+      </motion.div>
 
       {/* Mobile menu */}
-      <ul
-        className={
-          !nav
-            ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center z-40"
-        }
-      >
-        {/* Close button for mobile */}
-        {nav && (
-          <div onClick={handleClick}>
-            <IoMdClose size={28} />
-          </div>
-        )}
-        <li className="py-4 text-2xl">
-          <Link onClick={handleClick} to="home" smooth={true} duration={500}>
-            Home
-          </Link>
-        </li>
-        <li className="py-4 text-2xl">
-          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
-            About
-          </Link>
-        </li>
-        <li className="py-4 text-2xl">
-          <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
-            Skills
-          </Link>
-        </li>
-        <li className="py-4 text-2xl">
-          <Link
-            onClick={handleClick}
-            to="projects"
-            smooth={true}
-            duration={500}
+      <AnimatePresence>
+        {mobileNav && (
+          <MotionConfig
+            transition={{
+              type: "spring",
+              bounce: 0.1,
+            }}
           >
-            Projects
-          </Link>
-        </li>
-        <li className="py-4 text-2xl">
-          <Link
-            onClick={handleClick}
-            to="contact"
-            smooth={true}
-            duration={500}
-            offset={-20}
-          >
-            Contact
-          </Link>
-        </li>
+            <motion.div
+              key="mobile-menu"
+              initial="hide"
+              animate="show"
+              exit="hide"
+              variants={{
+                hide: {
+                  x: "-100%",
+                  opacity: 0,
+                  transition: {
+                    type: "spring",
+                    bounce: 0.1,
+                    when: "afterChildren",
+                    staggerChildren: 0.25,
+                  },
+                },
+                show: {
+                  x: "0%",
+                  opacity: 1,
+                  transition: {
+                    type: "spring",
+                    bounce: 0.1,
+                    when: "beforeChildren",
+                    staggerChildren: 0.25,
+                  },
+                },
+              }}
+              className="absolute top-0 left-0 w-full h-screen bg-[#ff5757] flex flex-col justify-center text-white items-center z-40"
+            >
+              {/* Close button for mobile */}
+              <motion.div
+                onClick={toggleMobileNav}
+                variants={{
+                  hide: { opacity: 0, x: -20 },
+                  show: { opacity: 1, x: 0 },
+                }}
+                className="cursor-pointer items-center justify-center"
+                whileHover={{ scale: 1.1 }} // Scale animation on hover
+                whileTap={{ scale: 0.9 }} // Scale animation on tap
+              >
+                <IoMdClose size={28} />
+              </motion.div>
 
-        {/* Social icons for mobile */}
-        <div className="flex items-center gap-6">
-          <Tooltip
-            title="Linkedin"
-            position="bottom"
-            arrow={true}
-            duration={300}
-            className="group"
-          >
-            <a
-              href="https://www.linkedin.com/in/ihsanmarseno/"
-              className="mx-4 text-gray-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaLinkedin size={30} className="group-hover:text-[#FF5757]" />
-            </a>
-          </Tooltip>
-          <Tooltip
-            title="GitHub"
-            position="bottom"
-            arrow={true}
-            duration={300}
-            className="group"
-          >
-            <a
-              href="https://github.com/ihsanmarseno"
-              className="mx-4 text-gray-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub size={30} className="group-hover:text-[#FF5757]"/>
-            </a>
-          </Tooltip>
-          <Tooltip
-            title="Email"
-            position="bottom"
-            arrow={true}
-            duration={300}
-            className="group"
-          >
-            <a
-              href="mailto:ihsanmarseno09@gmail.com"
-              className="mx-4 text-gray-300"
-            >
-              <HiOutlineMail size={30} className="group-hover:text-[#FF5757]"/>
-            </a>
-          </Tooltip>
-          <Tooltip
-            title="CV"
-            position="bottom"
-            arrow={true}
-            duration={300}
-            className="group"
-          >
-            <a
-              href="https://drive.google.com/file/d/1PSsrjvHyZ6vdsuITvVT-KO0d_1sY_YHp/view?usp=sharing"
-              className="mx-4 text-gray-300"
-            >
-              <BsFillPersonLinesFill size={30} className="group-hover:text-[#FF5757]"/>
-            </a>
-          </Tooltip>
-        </div>
-      </ul>
+              {/* Mobile menu links */}
+              <motion.ul
+                variants={{
+                  hide: { y: "25%", opacity: 0 },
+                  show: { y: "0%", opacity: 1 },
+                }}
+                className="list-none space-y-2 items-center justify-center text-center"
+              >
+                <motion.li className="py-2 text-2xl ">
+                  <Link onClick={toggleMobileNav} to="home" duration={500}>
+                    Home
+                  </Link>
+                </motion.li>
+                <motion.li className="py-2 text-2xl">
+                  <Link onClick={toggleMobileNav} to="about" duration={500}>
+                    About
+                  </Link>
+                </motion.li>
+                <motion.li className="py-2 text-2xl">
+                  <Link
+                    onClick={toggleMobileNav}
+                    to="skills"
+                    duration={500}
+                    offset={-20}
+                  >
+                    Skills
+                  </Link>
+                </motion.li>
+                <motion.li className="py-2 text-2xl">
+                  <Link onClick={toggleMobileNav} to="projects" duration={500}>
+                    Projects
+                  </Link>
+                </motion.li>
+                <motion.li className="py-2 text-2xl">
+                  <Link
+                    onClick={toggleMobileNav}
+                    to="contact"
+                    duration={500}
+                    offset={-20}
+                  >
+                    Contact
+                  </Link>
+                </motion.li>
+              </motion.ul>
+
+              {/* Social icons for mobile */}
+              <motion.div
+                variants={{
+                  hide: { y: "25%", opacity: 0 },
+                  show: { y: "0%", opacity: 1 },
+                }}
+                className="flex items-center gap-6 text-white"
+              >
+                <Tooltip
+                  title="Linkedin"
+                  position="bottom"
+                  arrow={true}
+                  duration={300}
+                  className="group"
+                >
+                  <a
+                    href="https://www.linkedin.com/in/ihsanmarseno/"
+                    className="mx-4 text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedin size={30} className="group-hover:text-black" />
+                  </a>
+                </Tooltip>
+                <Tooltip
+                  title="GitHub"
+                  position="bottom"
+                  arrow={true}
+                  duration={300}
+                  className="group"
+                >
+                  <a
+                    href="https://github.com/ihsanmarseno"
+                    className="mx-4 text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub size={30} className="group-hover:text-black" />
+                  </a>
+                </Tooltip>
+                <Tooltip
+                  title="Email"
+                  position="bottom"
+                  arrow={true}
+                  duration={300}
+                  className="group"
+                >
+                  <a
+                    href="mailto:ihsanmarseno09@gmail.com"
+                    className="mx-4 text-white"
+                  >
+                    <HiOutlineMail
+                      size={30}
+                      className="group-hover:text-black"
+                    />
+                  </a>
+                </Tooltip>
+                <Tooltip
+                  title="CV"
+                  position="bottom"
+                  arrow={true}
+                  duration={300}
+                  className="group"
+                >
+                  <a
+                    href="https://drive.google.com/file/d/1PSsrjvHyZ6vdsuITvVT-KO0d_1sY_YHp/view?usp=sharing"
+                    className="mx-4 text-white"
+                  >
+                    <BsFillPersonLinesFill
+                      size={30}
+                      className="group-hover:text-black"
+                    />
+                  </a>
+                </Tooltip>
+              </motion.div>
+            </motion.div>
+          </MotionConfig>
+        )}
+      </AnimatePresence>
 
       {/* Social icons */}
       <div className="hidden lg:flex fixed flex-col top-[35%] lg:left-0 z-50">
