@@ -16,7 +16,7 @@ const Projects = () => {
     AOS.init();
   }, []);
 
-  const project = data;
+  const project = data.sort((a, b) => b.id - a.id);
 
   const displayedProjects = project.slice(0, 4);
 
@@ -109,10 +109,10 @@ const Projects = () => {
                     {item?.description}
                   </p>
                 </div>
-                <div className="absolute bottom-0 pb-4">
-                  <div className="flex items-center gap-1 text-xs tracking-tight text-white">
+                <div className="absolute bottom-0 pb-4 items-center">
+                  <div className="flex items-center gap-1 text-xs tracking-normal text-white">
                     <span>
-                      <GrTechnology />
+                      <GrTechnology className="flex items-center justify-center" />
                     </span>
                     {item.technologies}
                   </div>

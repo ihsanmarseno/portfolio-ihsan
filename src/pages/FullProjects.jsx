@@ -22,7 +22,6 @@ const Projects = () => {
       ? data.filter((item) => item.field === selectedCategory)
       : data;
 
-    // Menggunakan semua data tanpa pembagian halaman
     setCurrentItems(filteredData);
 
     window.scrollTo({ top: 0, behavior: "smooth", duration: 500 });
@@ -53,7 +52,7 @@ const Projects = () => {
           <p className="inline md:text-4xl text-3xl font-bold text-white border-b-4 border-[#FF5757]">
             Projects
           </p>
-          <p className="py-4">{`//There are ${data.length} projects that I have worked on in the front-end and UI/UX fields`}</p>
+          <p className="pt-4">{`//There are ${data.length} projects that I have worked on in the front-end and UI/UX fields`}</p>
         </div>
 
         {/* Category Buttons */}
@@ -67,6 +66,16 @@ const Projects = () => {
             onClick={() => handleCategoryChange("")}
           >
             All
+          </button>
+          <button
+            className={`category-button ${
+              selectedCategory === "Full-stack"
+                ? "active bg-[#EAD196] text-black px-4 py-2"
+                : "border-2 group hover:bg-[#EAD196] hover:border-[#EAD196] py-2 px-4 hover:text-black"
+            }`}
+            onClick={() => handleCategoryChange("Full-stack")}
+          >
+            Full-stack
           </button>
           <button
             className={`category-button ${
